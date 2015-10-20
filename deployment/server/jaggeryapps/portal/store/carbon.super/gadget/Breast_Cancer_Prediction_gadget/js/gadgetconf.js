@@ -1,0 +1,1 @@
+var gadgetConfig ={"id":"Breast_Cancer_Prediction_gadget","title":"Breast Cancer Prediction gadget","datasource":"BreastCancerOutputStream:1.0.0","type":"realtime","columns":[{"name":"TIMESTAMP","type":"time"},{"name":"Class","type":"int"}],"maxUpdateValue":10,"chartConfig":{"chartType":"tabular","xAxis":1,"colorBasedStyle":true},"domain":"carbon.super"};

@@ -1,0 +1,17 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('NumericalExecutionPlan')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('numericalInputStream:1.0.0')
+define stream inputStream (No int, Cement double, Slag double, FlyAsh double, Water double, SP double, CoarseAggr double, FineAggr double, SLUMP double, FLOW double);
+
+@Export('numericalPredictionStream:1.0.0')
+define stream predictionStream (No int, CompressiveStrength double);
+
+from inputStream#ml:predict('/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/1.Model.2015-10-01_14-25-37,/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/1.Model.2015-10-01_14-25-37', 'double', No, Cement, Slag, FlyAsh, Water, SP, CoarseAggr, FineAggr, SLUMP, FLOW)
+select No, CompressiveStrength
+insert into predictionStream;

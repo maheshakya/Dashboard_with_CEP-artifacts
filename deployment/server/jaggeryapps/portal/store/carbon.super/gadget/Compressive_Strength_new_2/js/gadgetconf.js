@@ -1,0 +1,1 @@
+var gadgetConfig ={"id":"Compressive_Strength_new_2","title":"Compressive Strength new 2","datasource":"OutputStream:1.0.0","type":"realtime","columns":[{"name":"TIMESTAMP","type":"time"},{"name":"No","type":"int"},{"name":"CompressiveStrength","type":"double"}],"maxUpdateValue":10,"chartConfig":{"chartType":"tabular","xAxis":2,"colorBasedStyle":true},"domain":"carbon.super"};

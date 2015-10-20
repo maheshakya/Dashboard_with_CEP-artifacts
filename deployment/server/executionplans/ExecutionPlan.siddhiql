@@ -1,0 +1,17 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('ExecutionPlan')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('InputStream:1.0.0')
+define stream InputStream (Length double, Diameter double, Height double, WholeWeight double, ShuckedWeight double, VisceraWeight double, ShellWeight double, Rings double);
+
+@Export('PredictionStream:1.0.0')
+define stream PredictionStream (Sex string);
+
+from InputStream#ml:predict('/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/a1.Model.2015-09-24_15-19-48,/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/a3.Model.2015-09-24_15-21-22', 'String', Length, Diameter, Height, WholeWeight, ShuckedWeight, VisceraWeight, ShellWeight, Rings)
+select Sex
+insert into PredictionStream;

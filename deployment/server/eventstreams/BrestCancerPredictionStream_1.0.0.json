@@ -1,0 +1,16 @@
+{
+  "name": "BrestCancerPredictionStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "Class",
+      "type": "INT"
+    },
+    {
+      "name": "test",
+      "type": "STRING"
+    }
+  ]
+}

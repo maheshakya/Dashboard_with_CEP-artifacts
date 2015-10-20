@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventPublisher name="UI_event_publisher_1" statistics="disable"
+  trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
+  <from streamName="numericalPredictionStream" version="1.0.0"/>
+  <mapping customMapping="enable" type="wso2event">
+    <to streamName="OutputStream" version="1.0.0"/>
+    <payloadData>
+      <property>
+        <from name="No"/>
+        <to name="No" type="int"/>
+      </property>
+      <property>
+        <from name="CompressiveStrength"/>
+        <to name="CompressiveStrength" type="double"/>
+      </property>
+    </payloadData>
+  </mapping>
+  <to eventAdapterType="ui"/>
+</eventPublisher>

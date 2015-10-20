@@ -1,0 +1,1 @@
+var gadgetConfig ={"id":"temp2","title":"temp2","datasource":"BreastCancerOutputStream:1.0.0","type":"realtime","columns":[{"name":"TIMESTAMP","type":"time"},{"name":"Class","type":"int"}],"maxUpdateValue":10,"chartConfig":{"chartType":"tabular","xAxis":1},"domain":"carbon.super"};

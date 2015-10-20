@@ -1,0 +1,48 @@
+{
+  "name": "numericalInputStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "No",
+      "type": "INT"
+    },
+    {
+      "name": "Cement",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "Slag",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "FlyAsh",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "Water",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "SP",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "CoarseAggr",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "FineAggr",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "SLUMP",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "FLOW",
+      "type": "DOUBLE"
+    }
+  ]
+}

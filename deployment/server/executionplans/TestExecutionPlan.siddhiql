@@ -1,0 +1,19 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('TestExecutionPlan')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('TestStream:1.0.0')
+define stream inputstream (Sex_init string, Length double, Diameter double, Height double, WholeWeight double, ShuckedWeight double, VisceraWeight double, ShellWeight double, Rings double);
+
+@Export('TestOutputStream:1.0.0')
+define stream outputstream (Sex string, AvgLength double, AvgDiameter double, AvgHeight double, AvgWholeWeight double, AvgShuckedWeight double, AvgVisceraWeight double, AvgShellWeight double, AvgRings double);
+
+from inputstream
+select Sex_init as Sex, avg(Length) as AvgLength, avg(Diameter) as AvgDiameter, avg(Height) as AvgHeight, avg(WholeWeight) as AvgWholeWeight, avg(ShuckedWeight) as AvgShuckedWeight, avg(VisceraWeight) as AvgVisceraWeight, avg(ShellWeight) as AvgShellWeight, avg(Rings) as AvgRings
+group by Sex_init
+output last every 10000 events
+insert into outputstream;

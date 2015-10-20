@@ -1,0 +1,48 @@
+{
+  "name": "BreastCancerDataInputStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "SampleCodeNumber",
+      "type": "INT"
+    },
+    {
+      "name": "ClumpThickness",
+      "type": "INT"
+    },
+    {
+      "name": "UniformityOfCellSize",
+      "type": "INT"
+    },
+    {
+      "name": "UniformityOfCellShape",
+      "type": "INT"
+    },
+    {
+      "name": "MarginalAdhesion",
+      "type": "INT"
+    },
+    {
+      "name": "SingleEpithelialCellSize",
+      "type": "INT"
+    },
+    {
+      "name": "BareNuclei",
+      "type": "INT"
+    },
+    {
+      "name": "BlandChromati",
+      "type": "INT"
+    },
+    {
+      "name": "NormalNucleoli",
+      "type": "INT"
+    },
+    {
+      "name": "Mitoses",
+      "type": "INT"
+    }
+  ]
+}

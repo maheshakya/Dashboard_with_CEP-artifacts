@@ -1,0 +1,12 @@
+{
+  "name": "BreastCancerOutputStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "Class",
+      "type": "INT"
+    }
+  ]
+}

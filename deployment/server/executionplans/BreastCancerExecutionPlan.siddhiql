@@ -1,0 +1,18 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('BreastCancerExecutionPlan')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('ExecutionPlan')
+
+/* define streams/tables and write queries here ... */
+
+@Import('BreastCancerDataInputStream:1.0.0')
+define stream breastCancerInputStream (SampleCodeNumber int, ClumpThickness int, UniformityOfCellSize int, UniformityOfCellShape int, MarginalAdhesion int, SingleEpithelialCellSize int, BareNuclei int, BlandChromati int, NormalNucleoli int, Mitoses int);
+
+
+@Export('BrestCancerPredictionStream:1.0.0')
+define stream breastCancerPredictionStream (Class int, test string);
+
+from breastCancerInputStream#ml:predict('/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/a1.Model.2015-10-20_11-17-27,/home/maheshakya/Desktop/product_packs/wso2cep-4.0.1-SNAPSHOT/models/a1.Model.2015-10-20_11-17-27', 'int', SampleCodeNumber,ClumpThickness,UniformityOfCellSize,UniformityOfCellShape,MarginalAdhesion,SingleEpithelialCellSize,BareNuclei,BlandChromati,NormalNucleoli,Mitoses)
+select Class, 'test' as test
+insert into breastCancerPredictionStream;

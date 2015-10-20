@@ -1,0 +1,1 @@
+var gadgetConfig ={"id":"BreastCancerLineChart2_gadget","title":"BreastCancerLineChart2_gadget","datasource":"BreastCancerOutputStream:1.0.0","type":"realtime","columns":[{"name":"TIMESTAMP","type":"time"},{"name":"Class","type":"int"}],"maxUpdateValue":0,"chartConfig":{"chartType":"line","yAxis":[1],"xAxis":0,"interpolationMode":"monotone"},"domain":"carbon.super"};

@@ -1,0 +1,1 @@
+var gadgetConfig ={"id":"test3","title":"test3","datasource":"BrestCancerPredictionStream:1.0.0","type":"realtime","columns":[{"name":"TIMESTAMP","type":"time"},{"name":"Class","type":"int"},{"name":"test","type":"string"}],"maxUpdateValue":10,"chartConfig":{"chartType":"tabular","xAxis":2},"domain":"carbon.super"};

@@ -1,0 +1,16 @@
+{
+  "name": "numericalPredictionStream",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "No",
+      "type": "INT"
+    },
+    {
+      "name": "CompressiveStrength",
+      "type": "DOUBLE"
+    }
+  ]
+}
